@@ -1,0 +1,17 @@
+.root {
+    -fx-font-family: "System";
+}
+.root {
+    -fx-base: #ffffff;
+}
+#sundayEventLabel, #sundayTaskLabel, #mondayEventLabel, #mondayTaskLabel, #tuesdayEventLabel, #tuesdayTaskLabel, #wednesdayEventLabel, #wednesdayTaskLabel, #thursdayEventLabel, #thursdayTaskLabel, #fridayEventLabel, #fridayTaskLabel, #saturdayEventLabel, #saturdayTaskLabel {
+    -fx-background-color:  #ffffff;
+}
+.column-header, .tab {
+    -fx-background-color:  #ffffff;
+    -fx-border-color:  #ffffff;
+}
+.TableView, .TableColumn {
+    -fx-background-color:  #77BD12;
+    -fx-border-color:  derive(#661a33,25%);
+}

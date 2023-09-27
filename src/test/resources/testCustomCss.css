@@ -1,0 +1,7 @@
+.root {
+    -fx-font-family: "System";
+}
+.column-header, .tab {
+    -fx-background-color:  #fe0666;
+    -fx-border-color:  #fe0666;
+}

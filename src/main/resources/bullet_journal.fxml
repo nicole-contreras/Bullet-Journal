@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<Scene fx:id="root" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <AnchorPane fx:id="anchor" prefHeight="659.0" prefWidth="1074.0">
+      <children>
+         <BorderPane fx:id="borderPane" prefHeight="683.0" prefWidth="1114.0">
+            <top>
+               <HBox>
+                  <Button fx:id="editMax" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Edits Max" textOverrun="CLIP" wrapText="true" />
+                  <MenuBar fx:id="menuBar" useSystemMenuBar="true" HBox.hgrow="ALWAYS">
+                     <menus>
+                        <Menu fx:id="file" mnemonicParsing="false" text="File">
+                           <items>
+                              <MenuItem fx:id="newWeek" mnemonicParsing="false" text="New Week                cmd/ctrl + n" />
+                              <MenuItem fx:id="weekTemplate" mnemonicParsing="false" text="Load Template          cmd/ctrl + w" />
+                              <MenuItem fx:id="openFile" mnemonicParsing="false" text="Open                        cmd/ctrl + o" />
+                              <MenuItem fx:id="saveFile" mnemonicParsing="false" text="Save                         cmd/ctrl + s" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="event" mnemonicParsing="false" text="Event">
+                           <items>
+                              <MenuItem fx:id="newEvent" mnemonicParsing="false" text="New Event                          cmd/ctrl + e" />
+                              <MenuItem fx:id="removeEvent" mnemonicParsing="false" text="Remove Event                    cmd/ctrl + r" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="task" mnemonicParsing="false" text="Task">
+                           <items>
+                              <MenuItem fx:id="newTask" mnemonicParsing="false" text="New Task                            cmd/ctrl + t" />
+                              <MenuItem fx:id="removeTask" mnemonicParsing="false" text="Remove Task                      cmd/ctrl + r" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="themes" mnemonicParsing="false" text="Themes">
+                           <items>
+                              <MenuItem fx:id="darkMode" mnemonicParsing="false" text="Dark Mode                         cmd/ctrl + d" />
+                              <MenuItem fx:id="lightMode" mnemonicParsing="false" text="Light Mode                         cmd/ctrl + l" />
+                              <MenuItem fx:id="playfulMode" mnemonicParsing="false" text="Playful Mode                      cmd/ctrl + p" />
+                              <MenuItem fx:id="custom" mnemonicParsing="false" text="Custom                               cmd/ctrl + c" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+               </HBox>
+            </top>
+            <center>
+               <TabPane fx:id="weekView" prefHeight="613.0" prefWidth="899.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                  <tabs>
+                     <Tab fx:id="sunday" text="SUNDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewSunday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="sundayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="557.0" text="EVENT" />
+                                             <TableView fx:id="sundayEvent" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="sundayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="sundayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="sundayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="sundayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="562.0" prefWidth="566.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="sundayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="553.0" text="TASK" />
+                                             <TableView fx:id="sundayTask" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="sundayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="sundayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="sundayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                     <Tab fx:id="monday" text="MONDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewMonday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="mondayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="558.0" text="EVENT" />
+                                             <TableView fx:id="mondayEvent" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="mondayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="mondayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="mondayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="mondayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="mondayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="555.0" text="TASK" />
+                                             <TableView fx:id="mondayTask" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="mondayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="mondayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="mondayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                     <Tab fx:id="tuesday" text="TUESDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewTuesday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="557.0">
+                                          <children>
+                                             <Label fx:id="tuesdayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="558.0" text="EVENT" />
+                                             <TableView fx:id="tuesdayEvent" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="tuesdayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="tuesdayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="tuesdayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="tuesdayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="tuesdayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="554.0" text="TASK" />
+                                             <TableView fx:id="tuesdayTask" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="tuesdayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="tuesdayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="tuesdayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                     <Tab fx:id="wednesday" text="WEDNESDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewWednesday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="wednesdayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="558.0" text="EVENT" />
+                                             <TableView fx:id="wednesdayEvent" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="wednesdayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="wednesdayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="wednesdayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="wednesdayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="wednesdayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="554.0" text="TASK" />
+                                             <TableView fx:id="wednesdayTask" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="wednesdayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="wednesdayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="wednesdayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                     <Tab fx:id="thursday" text="THURSDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewThursday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="thursdayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="557.0" text="EVENT" />
+                                             <TableView fx:id="thursdayEvent" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="thursdayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="thursdayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="thursdayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="thursdayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="thursdayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="556.0" text="TASK" />
+                                             <TableView fx:id="thursdayTask" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="thursdayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="thursdayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="thursdayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                     <Tab fx:id="friday" text="FRIDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewFriday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="fridayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="558.0" text="EVENT" />
+                                             <TableView fx:id="fridayEvent" editable="true" prefHeight="665.0" prefWidth="558.0">
+                                                <columns>
+                                                   <TableColumn fx:id="fridayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="fridayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="fridayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="fridayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="fridayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="581.0" text="TASK" />
+                                             <TableView fx:id="fridayTask" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="fridayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="fridayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="fridayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                     <Tab fx:id="saturday" text="SATURDAY">
+                        <content>
+                           <SplitPane fx:id="dayViewSaturday" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox layoutX="-1.0" prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="saturdayEventLabel" alignment="CENTER" prefHeight="18.0" prefWidth="566.0" text="EVENT" />
+                                             <TableView fx:id="saturdayEvent" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="saturdayEventName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="saturdayEventDescription" prefWidth="317.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="saturdayEventStartTime" prefWidth="84.0" resizable="false" text="Start Time" />
+                                                   <TableColumn fx:id="saturdayEventDuration" prefWidth="80.5" resizable="false" text="Duration" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                       <VBox prefHeight="665.0" prefWidth="558.0">
+                                          <children>
+                                             <Label fx:id="saturdayTaskLabel" alignment="CENTER" prefHeight="18.0" prefWidth="600.0" text="TASK" />
+                                             <TableView fx:id="saturdayTask" editable="true" prefHeight="665.0">
+                                                <columns>
+                                                   <TableColumn fx:id="saturdayTaskName" prefWidth="78.39999085664749" resizable="false" text="Name" />
+                                                   <TableColumn fx:id="saturdayTaskDescription" prefWidth="362.5" resizable="false" text="Description" />
+                                                   <TableColumn fx:id="saturdayTaskCompleted" prefWidth="71.0" resizable="false" text="Completed" />
+                                                </columns>
+                                             </TableView>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </content>
+                     </Tab>
+                  </tabs>
+               </TabPane>
+            </center>
+         </BorderPane>
+      </children></AnchorPane>
+</Scene>

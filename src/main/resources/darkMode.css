@@ -1,0 +1,16 @@
+.root {
+    -fx-base: #252536;
+    -fx-font-family: "OCR A Extended";
+}
+
+.notification-bar>.pane .title {
+    -fx-font-size: 1.333em; /*16px;*/
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.notification-bar>.pane .label {
+    -fx-font-size: 1em; /*12px;*/
+    -fx-text-fill: #ffffff;
+    -fx-alignment: top-left;
+}

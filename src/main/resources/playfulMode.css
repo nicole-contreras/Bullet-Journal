@@ -1,0 +1,265 @@
+.root {
+    -fx-font-family: "MV Boli";
+}
+
+#sunday {
+    -fx-background-color: #f6a09a;
+}
+
+#sundayEvent, #sundayTask {
+    -fx-background-color:  #f4cccc;
+    -fx-base: #f6a09a;
+}
+
+#sundayEventLabel, #sundayTaskLabel{
+    -fx-background-color:  #e06666;
+}
+
+#sundayEventName.column-header, #sundayEventDescription.column-header, #sundayEventStartTime.column-header,
+#sundayEventDuration.column-header, #sundayTaskName.column-header, #sundayTaskDescription.column-header,
+#sundayTaskStartTime.column-header, #sundayTaskDuration.column-header,
+#sundayTaskCompleted.column-header {
+    -fx-background-color: #f6a09a;
+    -fx-border-color: #f6a09a;
+}
+
+#dayViewSunday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #f6a09a, #e77878);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewSunday {
+    -fx-background-color: #f6a09a;
+}
+
+#sundayEventName, #sundayEventDescription, #sundayEventStartTime, #sundayEventDuration,
+#sundayTaskName, #sundayTaskDescription, #sundayTaskStartTime, #sundayTaskDuration, #sundayTaskCompleted {
+    -fx-background-color: #f4cccc;
+    -fx-border-color: #eeb7b7;
+}
+
+#monday {
+    -fx-background-color:  #f9cb9c;
+}
+
+#mondayEvent, #mondayTask {
+    -fx-background-color:  #fce5cd;
+    -fx-base: #f9cb9c;
+}
+
+#mondayEventLabel, #mondayTaskLabel{
+    -fx-background-color:  #f6b26b;
+}
+
+#mondayEventName.column-header, #mondayEventDescription.column-header, #mondayEventStartTime.column-header,
+#mondayEventDuration.column-header, #mondayTaskName.column-header, #mondayTaskDescription.column-header,
+#mondayTaskStartTime.column-header, #mondayTaskDuration.column-header,
+#mondayTaskCompleted.column-header {
+    -fx-background-color: #f9cb9c;
+    -fx-border-color: #f9cb9c;
+}
+
+#dayViewMonday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #f9cb9c, #f6b26b);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewMonday {
+    -fx-background-color: #f9cb9c;
+}
+
+#mondayEventName, #mondayEventDescription, #mondayEventStartTime, #mondayEventDuration,
+#mondayTaskName, #mondayTaskDescription, #mondayTaskStartTime, #mondayTaskDuration, #mondayTaskCompleted
+{
+    -fx-background-color:   #fce5cd;
+    -fx-border-color: #f7d8b8;
+}
+
+#tuesday {
+    -fx-background-color: #ffe599;
+}
+
+#tuesdayEvent, #tuesdayTask {
+    -fx-background-color:   #fff2cc;
+    -fx-base: #ffe599;
+}
+
+#tuesdayEventLabel, #tuesdayTaskLabel{
+    -fx-background-color:   #ffd966;
+}
+
+#tuesdayEventName.column-header, #tuesdayEventDescription.column-header, #tuesdayEventStartTime.column-header,
+#tuesdayEventDuration.column-header, #tuesdayTaskName.column-header, #tuesdayTaskDescription.column-header,
+#tuesdayTaskStartTime.column-header, #tuesdayTaskDuration.column-header,
+#tuesdayTaskCompleted.column-header {
+    -fx-background-color: #ffe599;
+    -fx-border-color: #ffe599;
+}
+
+#dayViewTuesday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #ffe599, #ffd966);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewTuesday {
+    -fx-background-color: #ffe599;
+}
+
+#tuesdayEventName, #tuesdayEventDescription, #tuesdayEventStartTime, #tuesdayEventDuration,
+#tuesdayTaskName, #tuesdayTaskDescription, #tuesdayTaskStartTime, #tuesdayTaskDuration, #tuesdayTaskCompleted
+{
+    -fx-background-color:  #fff2cc;
+    -fx-border-color: #fbe9b5;
+}
+
+#wednesday {
+    -fx-background-color:  #b6d7a8;
+}
+
+#wednesdayEvent, #wednesdayTask {
+    -fx-background-color:    #d9ead3;
+    -fx-base: #b6d7a8;
+}
+
+#wednesdayEventLabel, #wednesdayTaskLabel{
+    -fx-background-color:    #93c47d;
+}
+
+#wednesdayEventName.column-header, #wednesdayEventDescription.column-header, #wednesdayEventStartTime.column-header,
+#wednesdayEventDuration.column-header, #wednesdayTaskName.column-header, #wednesdayTaskDescription.column-header,
+#wednesdayTaskStartTime.column-header, #wednesdayTaskDuration.column-header,
+#wednesdayTaskCompleted.column-header {
+    -fx-background-color: #b6d7a8;
+    -fx-border-color: #b6d7a8;
+}
+
+#dayViewWednesday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #b6d7a8, #93c47d);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewWednesday {
+    -fx-background-color: #b6d7a8;
+}
+
+#wednesdayEventName, #wednesdayEventDescription, #wednesdayEventStartTime, #wednesdayEventDuration,
+#wednesdayTaskName, #wednesdayTaskDescription, #wednesdayTaskStartTime, #wednesdayTaskDuration, #wednesdayTaskCompleted
+{
+    -fx-background-color:   #d9ead3;
+    -fx-border-color: #c5e0bb;
+}
+
+#thursday {
+    -fx-background-color:  #9fc5e8;
+}
+
+#thursdayEvent, #thursdayTask {
+    -fx-background-color:    #cfe2f3;
+    -fx-base: #9fc5e8;
+}
+
+#thursdayEventLabel, #thursdayTaskLabel{
+    -fx-background-color:    #6fa8dc;
+}
+
+#thursdayEventName.column-header, #thursdayEventDescription.column-header, #thursdayEventStartTime.column-header,
+#thursdayEventDuration.column-header, #thursdayTaskName.column-header, #thursdayTaskDescription.column-header,
+#thursdayTaskStartTime.column-header, #thursdayTaskDuration.column-header,
+#thursdayTaskCompleted.column-header {
+    -fx-background-color: #9fc5e8;
+    -fx-border-color: #9fc5e8;
+}
+
+#dayViewThursday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #9fc5e8, #6fa8dc);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewThursday {
+    -fx-background-color: #9fc5e8;
+}
+
+#thursdayEventName, #thursdayEventDescription, #thursdayEventStartTime, #thursdayEventDuration,
+#thursdayTaskName, #thursdayTaskDescription, #thursdayTaskStartTime, #thursdayTaskDuration, #thursdayTaskCompleted
+{
+    -fx-background-color:   #cfe2f3;
+    -fx-border-color: #c0d8ed;
+}
+
+#friday {
+    -fx-background-color:  #b4a7d6;
+}
+
+#fridayEvent, #fridayTask {
+    -fx-background-color:    #d9d2e9;
+    -fx-base: #b4a7d6;
+}
+
+#fridayEventLabel, #fridayTaskLabel{
+    -fx-background-color:    #8e7cc3;
+}
+
+#fridayEventName.column-header, #fridayEventDescription.column-header, #fridayEventStartTime.column-header,
+#fridayEventDuration.column-header, #fridayTaskName.column-header, #fridayTaskDescription.column-header,
+#fridayTaskStartTime.column-header, #fridayTaskDuration.column-header,
+#fridayTaskCompleted.column-header {
+    -fx-background-color: #b4a7d6;
+    -fx-border-color: #b4a7d6;
+}
+
+#dayViewFriday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #b4a7d6, #8e7cc3);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewFriday {
+    -fx-background-color: #b4a7d6;
+}
+
+#fridayEventName, #fridayEventDescription, #fridayEventStartTime, #fridayEventDuration,
+#fridayTaskName, #fridayTaskDescription, #fridayTaskStartTime, #fridayTaskDuration, #fridayTaskCompleted
+{
+    -fx-background-color:   #d9d2e9;
+    -fx-border-color: #cec5e5;
+}
+
+#saturday {
+    -fx-background-color:  #d5a6bd;
+}
+
+#saturdayEvent, #saturdayTask {
+    -fx-background-color:    #ead1dc;
+    -fx-base: #d5a6bd;
+}
+
+#saturdayEventLabel, #saturdayTaskLabel{
+    -fx-background-color:    #c27ba0;
+}
+
+#saturdayEventName.column-header, #saturdayEventDescription.column-header, #saturdayEventStartTime.column-header,
+#saturdayEventDuration.column-header, #saturdayTaskName.column-header, #saturdayTaskDescription.column-header,
+#saturdayTaskStartTime.column-header, #saturdayTaskDuration.column-header,
+#saturdayTaskCompleted.column-header {
+    -fx-background-color: #d5a6bd;
+    -fx-border-color: #d5a6bd;
+}
+
+#dayViewSaturday.split-pane:horizontal > .split-pane-divider {
+    -fx-inner-border-horizontal: linear-gradient(to right, #d5a6bd, #c27ba0);
+    -fx-background-color: -fx-inner-border-horizontal;
+}
+
+#dayViewSaturday {
+    -fx-background-color: #d5a6bd;
+}
+
+#saturdayEventName, #saturdayEventDescription, #saturdayEventStartTime, #saturdayEventDuration,
+#saturdayTaskName, #saturdayTaskDescription, #saturdayTaskStartTime, #saturdayTaskDuration, #saturdayTaskCompleted
+{
+    -fx-background-color:   #ead1dc;
+    -fx-border-color: #e6c2d2;
+}
+
+.notifications {
+    -fx-background-color: #fec9ff;
+}

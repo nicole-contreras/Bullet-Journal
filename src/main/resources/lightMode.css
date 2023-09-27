@@ -1,0 +1,9 @@
+.root {
+    -fx-base: #d0e0e3;
+    -fx-font-family: "Maiandra GD";
+}
+
+.notifications {
+    -fx-background-color: #a3c0f0;
+}
+
